@@ -1,0 +1,8 @@
+2020-10-05 22:31:38.253 INFO [main][UiocApplication.java:35] - com.cx.uioc.UiocApplication.main []
+2020-10-05 22:31:38.497 INFO [main][StartupInfoLogger.java:55] - Starting UiocApplication on DESKTOP-KIUTBBO with PID 29292 (C:\Users\pgiri\OneDrive\Desktop\musicstoreservice\target\classes started by pgiri in C:\Users\pgiri\OneDrive\Desktop\musicstoreservice)
+2020-10-05 22:31:38.500 INFO [main][SpringApplication.java:651] - No active profile set, falling back to default profiles: default
+2020-10-05 22:31:40.758 INFO [main][StartupInfoLogger.java:61] - Started UiocApplication in 2.457 seconds (JVM running for 3.127)
+2020-10-05 22:32:46.706 INFO [http-nio-8081-exec-2][MusicController.java:137] - com.cx.uioc.controller.MusicController.getMusics [({})]
+2020-10-05 22:33:02.841 INFO [http-nio-8081-exec-4][FileUploadController.java:50] - uploadFile [(fileorg.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@3889700b)]
+2020-10-05 22:33:03.088 INFO [http-nio-8081-exec-6][MusicController.java:77] - com.cx.uioc.controller.MusicController.addNewMusic [music(com.cx.uioc.dto.MusicDTO@2918d8ce)]
+2020-10-05 22:33:03.089 INFO [http-nio-8081-exec-6][MusicService.java:45] - com.cx.uioc.service.MusicService.addNewMusic [MusicDTO(com.cx.uioc.dto.MusicDTO@2918d8ce)]
