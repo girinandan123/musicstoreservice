@@ -6,15 +6,8 @@ import com.cx.uioc.domain.AuditEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
-@ToString
-@EqualsAndHashCode
-@NoArgsConstructor
+
 public class AuditDTO {
 	/**
 	 * Constants
@@ -25,13 +18,12 @@ public class AuditDTO {
 	 * Properties
 	 */
 	/** Music id */
-	@Getter
+	
 	@NotNull(message = "id of audit music requires not be blank")
 	private long id;
 	
 	/** Reject reason */
-	@JsonProperty("reject_reason")
-	@Getter
+	@JsonProperty("reject_reason")	
 	private String rejectReason;
 	
 	public AuditEntity toEntity() {
@@ -46,5 +38,23 @@ public class AuditDTO {
 	public AuditDTO(AuditEntity entity) {
 		id = entity.getId();
 		rejectReason = entity.getRejectReason();
+	}
+	
+	public AuditDTO() {}
+	
+	public long getId() {
+		return id;
+	}
+	
+	public String getRejectReason() {
+		return rejectReason;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	public void setRejectReason(String rejectReason) {
+		this.rejectReason = rejectReason;
 	}
 }

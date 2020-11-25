@@ -90,11 +90,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
+		
  		<dependency>
     		<groupId>org.apache.commons</groupId>
     		<artifactId>commons-lang3</artifactId>
@@ -144,26 +140,7 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
-		<dependency>  
-    		<groupId>org.springframework.security</groupId>  
-    		<artifactId>spring-security-web</artifactId>    
-		</dependency>  
-   
-		<dependency>  
-    		<groupId>org.springframework.security</groupId>  
-    		<artifactId>spring-security-core</artifactId>  
-     
-		</dependency>  
-   
-		<dependency>  
-    		<groupId>org.springframework.security</groupId>  
-    		<artifactId>spring-security-config</artifactId>  
-		</dependency>
-		<dependency>
-			<groupId>com.paypal.sdk</groupId>
-			<artifactId>rest-api-sdk</artifactId>
-			<version>1.4.2</version>
-		</dependency>
+		
 	
 		
 		</dependencies>

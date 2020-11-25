@@ -7,14 +7,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "reject_music_entity")
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Data
-@NoArgsConstructor
+
 public class AuditEntity {
 
 	/** Music identifier */
@@ -24,4 +21,24 @@ public class AuditEntity {
 	/** Audit rejected reason */
 	@Column
 	private String rejectReason;
+	
+	public AuditEntity() {
+		
+	}
+	
+	public long getId() {
+		return id;
+	}
+	
+	public String getRejectReason() {
+		return rejectReason;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	public void setRejectReason(String rejectReason) {
+		this.rejectReason = rejectReason;
+	}
 }

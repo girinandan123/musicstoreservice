@@ -6,15 +6,9 @@ import javax.validation.constraints.Size;
 import com.cx.uioc.domain.MusicEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-@ToString
-@EqualsAndHashCode
-@NoArgsConstructor
 public class MusicDTO {
 	/**
 	 * Constants
@@ -29,47 +23,43 @@ public class MusicDTO {
 	 * Properties
 	 */
 	/** Music id */
-	@Getter
+	@JsonProperty("id")
 	private long id;
 	
 	/** Music title */
-	@Getter
 	@NotNull(message = "title of music requires not be blank")
-	@Size(min = MIN_TITLE_LENGTH, message = "length of music title requires equal to or greater than " + MIN_TITLE_LENGTH)
+//	@Size(min = MIN_TITLE_LENGTH, message = "length of music title requires equal to or greater than " + MIN_TITLE_LENGTH)
+	@JsonProperty("title")
 	private String title;
 	
 	/** Author */
-	@Getter	
+	@JsonProperty("author")
 	private String author;
 	
 	/** Price */
-	@Getter
+	@JsonProperty("price")
 	@NotNull(message = "price of music requires not be blank")
-	private Double price;
+	private double price;
 	
 	/** Music description */
-	@Getter
 	@JsonProperty("description")
 	private String description;
 	
 	/** Music copyright */
-	@Getter
+	@JsonProperty("copyright")
 	private String copyright;
 	
 	/** Music contents size */
 	@JsonProperty("contents_size")
-	@Getter
 	@NotNull(message = "contents size requires not be blank")
 	private Long contentsSize;
 	
 	/** Music contents URL */
 	@JsonProperty("contents_url")
-	@Getter
 	@NotNull(message = "contents url requires not be blank")
 	private String contentsUrl;
 	
 	/** Music audit status */
-	@Getter
 	private String status;
 	
 	/**
@@ -105,4 +95,8 @@ public class MusicDTO {
 		
 		return entity;
 	}
+	
+	public MusicDTO() {}
+	
+	public String getTitle() {return title;}
 }

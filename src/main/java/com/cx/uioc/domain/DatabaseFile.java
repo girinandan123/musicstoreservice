@@ -2,8 +2,6 @@ package com.cx.uioc.domain;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import lombok.Data;
-
 import java.util.Arrays;
 
 import javax.persistence.*;
@@ -13,7 +11,6 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "files")
-@Data
 public class DatabaseFile {
 	/**
 	 * Properties
@@ -52,4 +49,34 @@ public class DatabaseFile {
 			this.data = Arrays.copyOf(data, data.length);
 		}
 	}
+	
+	public String getFileId( ) {
+		return fileId;
+	}
+	
+	public String getFileName() {
+		return fileName;
+	}
+	
+	public String getFileType() {
+		return fileType;
+	}
+	
+	public byte[] getData() {
+		return data;
+	}
+	
+	public void setFileId(String fileId) {
+		this.fileId = fileId;
+	}
+	
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+	
+	
 }

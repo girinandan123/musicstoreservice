@@ -64,7 +64,7 @@ public class MusicController {
 	 */
 	
 	/**
-	 * Add a new music
+	 * Add a new music - second administrator
 	 */
 	@ApiOperation(value = "Add a new music")
     @ApiResponses(value = { 
@@ -85,7 +85,7 @@ public class MusicController {
 	        	}
 	        	if (bindingResult.getFieldErrorCount() > NumberUtils.INTEGER_ONE) {
 	        		String errString = bindingResult.getAllErrors().get(0).getDefaultMessage();
-	        		throw new ValidationFailException(errString);	        		
+	        		throw new ValidationFailException(errString);   		
 	        	}
 	        }
 	        

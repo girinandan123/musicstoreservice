@@ -9,13 +9,10 @@ import javax.persistence.Id;
 import com.cx.uioc.domain.enums.AuditStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Data
-@NoArgsConstructor
+
 public class MusicEntity {
 	/**
 	 * Properties
@@ -56,5 +53,80 @@ public class MusicEntity {
 	/** music status - pending, passed, or rejected */
 	@Column
 	private AuditStatus status;
+	
+	public MusicEntity() {
 		
+	}
+	
+	public long getId() {
+		return id;
+	}
+	
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+	
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	public String getCopyright() {
+		return copyright;
+	}
+	
+	public void setCopyright(String copyright) {
+		this.copyright = copyright;
+	}
+	
+	public long getContentsSize() {
+		return contentsSize;
+	}
+	
+	public void setContentsSize(long contentsSize) {
+		this.contentsSize = contentsSize;
+	}
+	
+	public String getContentsUrl() {
+		return contentsUrl;
+	}
+	
+	public void setContentsUrl(String contentsUrl) {
+		this.contentsUrl = contentsUrl;
+	}
+	
+	public AuditStatus getStatus() {
+		return status;
+	}
+	
+	public void setStatus(AuditStatus status) {
+		this.status = status;
+	}
 }
