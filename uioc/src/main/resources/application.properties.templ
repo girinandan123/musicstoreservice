@@ -1,0 +1,17 @@
+## Spring Context Path
+server.servlet.context-path=/uioc
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring.datasource.driver-class-name = com.mysql.cj.jdbc.Driver
+spring.datasource.url = jdbc:mysql://{IP address}:3306/fengmao_p?autoReconnect=true&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+spring.datasource.username = {User Name}
+spring.datasource.password = {Password}
+
+spring.datasource.tomcat.testWhileIdle = true
+spring.datasource.tomcat.timeBetweenEvictionRunsMillis = 60000
+spring.datasource.tomcat.validationQuery = SELECT 1
+
+## Logging Properties
+logging.level.org.springframework.web = DEBUG
+logging.level.org.hibernate = ERROR
+logging.level.org.ibatis = ERROR
